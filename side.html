@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sidebar</title>
+    <link rel="stylesheet" href="sidebar.css">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+
+</head>
+<body>
+    <div class="menu-btn">
+        <i class='bx bx-menu'></i>
+    </div>
+    <nav>
+    <center><label class="navi">Excellence in Everything we do</label></center>
+    </nav>
+     <div class="sidebar">
+        <header>
+           <div class="close-btn">
+            <i class='bx bx-window-close'></i>
+           </div>
+           <img src="./images/a1.jpeg" alt="">
+           <h1>Coding here</h1>
+        </header>
+        <div class="menu">
+            <div class="item"><a href="home.html"><i class='bx bx-home'></i>Home</a></div>
+                <div class="item"><a href="about.html"><i class='bx bxs-buildings'></i>About</a></div>
+                    <div class="item"><a class="sub-btn" href="#"><i class='bx bxs-server'></i>Service
+                        <i class='bx bx-right-arrow dropdown' ></i>
+                   </a>
+                <div class="sub-menu">
+                    <a href="edit.html" class="sub-item">Edit</a>
+                    <a href="books.html" class="sub-item">e-books</a>
+                    <a href="project.html" class="sub-item">project</a>
+                </div>
+                </div>
+                        <div class="item"><a href="contact.html"><i class='bx bxs-contact'></i>contact</a></div>
+        </div>
+     </div>
+        <main class="content">
+            
+            <br><br><br><br><img align="left" src="./images/book.jpg" height="400" width="300">
+            
+            <br><br><br><br><br><h1>Creative Design</h1>
+            <p>Imagination is the beginning of creation. You imagine what you desire, you will what you imagine, and at last, you create what you will.</p>
+           
+        </main>
+     </div>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+     <script>
+        $(document).ready(function(){
+            $('.menu-btn').click(function(){
+                $('.sidebar').addClass('active');
+                $('.menu-btn').css("visibility","hidden");
+            });
+            $('.close-btn').click(function(){
+                $('.sidebar').removeClass('active');
+                $('.menu-btn').css("visibility","visible");
+            });
+            $('.sub-btn').click(function(){
+                $(this).next('.sub-menu').slideToggle();
+                $(this).find('.dropdown').toggleClass('rotate');
+            })
+        })
+     </script>
+</body>
+</html>
